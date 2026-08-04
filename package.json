@@ -1,0 +1,20 @@
+{
+  "name": "nmbm-aerial-imagery-leaflet",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/download-fonts.mjs && node scripts/fetch-catalog.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/download-fonts.mjs && node scripts/fetch-catalog.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "catalog": "node scripts/fetch-catalog.mjs"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "vite": "^8.0.13"
+  }
+}

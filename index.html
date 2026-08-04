@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nelson Mandela Bay Historic Aerial Viewer</title>
+  </head>
+  <body>
+    <div id="app">
+      <aside class="sidebar" aria-label="Aerial imagery layer selector">
+        <div class="brand-block">
+          <p class="eyebrow">Nelson Mandela Bay</p>
+          <h1>Historic Aerial Viewer</h1>
+          <p class="subtitle">Browse aerial captures and share exact map views.</p>
+        </div>
+
+        <div class="control-block">
+          <label for="layer-search">Search layers</label>
+          <input id="layer-search" type="search" placeholder="Find by year or name" autocomplete="off" />
+        </div>
+
+        <div class="control-block">
+          <label for="opacity-slider">Aerial opacity: <span id="opacity-value">100%</span></label>
+          <input id="opacity-slider" type="range" min="0" max="1" step="0.05" value="1" />
+        </div>
+
+        <div class="status" id="status" role="status" aria-live="polite">Loading aerial layers...</div>
+
+        <ul id="layer-list" class="layer-list" aria-label="Aerial imagery layers"></ul>
+      </aside>
+
+      <main class="map-shell">
+        <div id="map" aria-label="Leaflet map"></div>
+        <div id="layer-description" class="layer-description" aria-live="polite">
+          Select an aerial layer to view its description.
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

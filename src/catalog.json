@@ -1,0 +1,89 @@
+{
+	"generatedAt": "2026-08-02T14:44:39.398Z",
+	"layers": [
+		{
+			"name": "Aerial/Aerials_2022",
+			"title": "Aerial 2022",
+			"year": 2022,
+			"description": null,
+			"pixelSize": 0.05
+		},
+		{
+			"name": "Aerial/Aerials_2018",
+			"title": "Aerial 2018",
+			"year": 2018,
+			"description": null,
+			"pixelSize": 0.05
+		},
+		{
+			"name": "Aerial/Aerials_2017",
+			"title": "Aerial 2017",
+			"year": 2017,
+			"description": "Aerials 2017",
+			"pixelSize": 0.05
+		},
+		{
+			"name": "Aerial/Aerial_2013",
+			"title": "Aerial 2013",
+			"year": 2013,
+			"description": "Aerial Photo Taken from Nov 2012-Feb 2013",
+			"pixelSize": 0.1
+		},
+		{
+			"name": "Aerial/Aerial_2011",
+			"title": "Aerial 2011",
+			"year": 2011,
+			"description": null,
+			"pixelSize": 0.1
+		},
+		{
+			"name": "Aerial/Aerial_2009",
+			"title": "Aerial 2009",
+			"year": 2009,
+			"description": null,
+			"pixelSize": 0.1
+		},
+		{
+			"name": "Aerial/Aerial_2009_NGI",
+			"title": "Aerial 2009 NGI",
+			"year": 2009,
+			"description": null,
+			"pixelSize": 0
+		},
+		{
+			"name": "Aerial/Aerial_2007_2004",
+			"title": "Aerial 2007 2004",
+			"year": 2007,
+			"description": null,
+			"pixelSize": 0.25
+		},
+		{
+			"name": "Aerial/Aerial_2004",
+			"title": "Aerial 2004",
+			"year": 2004,
+			"description": null,
+			"pixelSize": 0.25
+		},
+		{
+			"name": "Aerial/Aerial_1997",
+			"title": "Aerial 1997",
+			"year": 1997,
+			"description": null,
+			"pixelSize": 0.25
+		},
+		{
+			"name": "Aerial/Hillshade",
+			"title": "Hillshade",
+			"year": null,
+			"description": null,
+			"pixelSize": 20
+		},
+		{
+			"name": "Aerial/Topo50",
+			"title": "Topo50",
+			"year": null,
+			"description": null,
+			"pixelSize": 4.238
+		}
+	]
+}
