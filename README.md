@@ -1,4 +1,4 @@
-# Nelson Mandela Bay Historic Aerial Viewer
+# Nelson Mandela Bay Municipality Historic Aerial Viewer
 
 A modern Leaflet web app that loads historic aerial imagery from the Nelson Mandela Bay Municipality GIS services and displays it as map layers.
 
