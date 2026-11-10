@@ -35,12 +35,16 @@ each tile request asks the server to reproject to EPSG:3857
 which is bundled into the app. It runs automatically before `dev` and `build`.
 If the server is unreachable and a previous `src/catalog.json` exists, the
 existing file is kept so builds still succeed.
+Unchanged layer data leaves the file and its generation timestamp untouched.
 
 Refresh the catalog manually:
 
 ```bash
 npm run catalog
 ```
+
+Use `npm run catalog -- --strict` to fail on refresh errors instead of keeping
+the existing catalog.
 
 ## Development
 
@@ -109,6 +113,11 @@ Opening a permalink restores the requested layer and map view.
 
 ## Automation
 
+- Catalog update workflow: `.github/workflows/update-catalog.yml`
+	- Runs on the first day of each month at 04:23 UTC, or via manual dispatch.
+	- Opens or updates a PR from `automation/update-catalog` only when layer data changes.
+	- Requires **Allow GitHub Actions to create and approve pull requests** in
+	  the repository's **Settings > Actions > General > Workflow permissions**.
 - GitHub Pages publish workflow: `.github/workflows/pages-publish.yml`
 	- Triggers on pushes to `main` and manual dispatch.
 	- Builds with Node 26 and publishes `dist/` via GitHub Pages actions.
