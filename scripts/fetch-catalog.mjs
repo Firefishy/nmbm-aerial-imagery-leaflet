@@ -116,10 +116,17 @@ async function hasExistingCatalog() {
 async function run() {
 	try {
 		const catalog = await buildCatalog();
+		if (await hasExistingCatalog()) {
+			const existing = JSON.parse(await readFile(catalogPath, "utf8"));
+			if (JSON.stringify(existing.layers) === JSON.stringify(catalog.layers)) {
+				console.log("Catalog layers unchanged; keeping existing src/catalog.json");
+				return;
+			}
+		}
 		await writeFile(catalogPath, `${JSON.stringify(catalog, null, "\t")}\n`, "utf8");
 		console.log(`Wrote src/catalog.json with ${catalog.layers.length} layer(s)`);
 	} catch (error) {
-		if (await hasExistingCatalog()) {
+		if (!process.argv.includes("--strict") && await hasExistingCatalog()) {
 			console.warn(
 				`Catalog refresh failed (${error instanceof Error ? error.message : error}); keeping existing src/catalog.json`,
 			);
